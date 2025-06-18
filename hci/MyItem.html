@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FINDME - Semua Item</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0; font-family:Inter; min-height:100vh; display:flex; flex-direction:column;">
+    <header style="background-color: #5cd1f5; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="color: white; font-size: 1.5rem; font-weight: bold;">FINDME</div>
+        <nav>
+            <a href="Home.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Home</a>
+            <a href="MyItem.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">MyItem</a>
+            <a href="Location.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Location</a>
+            <a href="Product.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Product</a>
+            <a href="Setting.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Setting</a>
+        </nav>
+    </header>
+
+    <main style="padding:40px; flex:1;">
+        <h1 style="margin-bottom:20px;">Semua Item</h1>
+
+        <div style="margin-bottom:30px;">
+            <label for="filter" style="font-weight:bold; margin-right:10px;">Filter Kategori:</label>
+            <select id="filter" onchange="filterProduk()" style="padding:8px 12px; font-family:'Inter', sans-serif;">
+                <option value="semua">Semua</option>
+                <option value="headphone">Backpack</option>
+                <option value="earphone">Suitcase</option>
+                <option value="open-ear">Key</option>
+                <option value="speaker">Wallet</option>
+            </select>
+        </div>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        ">
+            <div class="produk headphone" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.01.jpg" alt="Headphone" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Backpack.01</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk headphone" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.02.jpeg" alt="Headphone" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Backpack.02</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk headphone" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.03.jpg" alt="Headphone" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Backpack.03</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk earphone" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.04.jpg" alt="Earphone" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Suitcase.01</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk earphone" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.05.avif" alt="Earphone" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Suitcase.02</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk open-ear" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.06.jpeg" alt="Earbuds Open-ear" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Key.01</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk open-ear" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.07.webp" alt="Earbuds Open-ear" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Key.02</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk speaker" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.08.jpeg" alt="Speaker" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Wallet.01</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="produk speaker" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+                <img src="assets/findme.09.webp" alt="Speaker" style="width:45%; height:350px; object-fit:cover;">
+                <div style="padding:10px; display:flex; justify-content:space-between; font-size:14px; font-weight:bold;">
+                    <span>Wallet.02</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color:#5cd1f5; color:white; padding:20px; text-align:center;">
+        <div style="font-size:18px; font-weight:bold;">FINDME</div>
+        <div style="margin-top:10px;">
+            <a href="Home.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Home</a>
+            <a href="MyItem.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">MyItem</a>
+            <a href="Location.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Location</a>
+            <a href="Product.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Product</a>
+            <a href="Setting.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Setting</a>
+        </div>
+        <p style="margin-top:10px; font-size:12px;">© 2025 Findme, Semua Hak Dilindungi</p>
+    </footer>
+
+    <script>
+        function filterProduk() {
+            const kategori = document.getElementById("filter").value;
+            const produk = document.querySelectorAll(".produk");
+
+            produk.forEach((item) => {
+            if (kategori === "semua") {
+                item.style.display = "block";
+            } else {
+                item.style.display = item.classList.contains(kategori) ? "block" : "none";
+            }
+            });
+        }
+    </script>
+</body>
+</html>

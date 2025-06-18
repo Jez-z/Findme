@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FINDME - Location</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; font-family: Inter; background-color: #fff; color: #000;">
+    <header style="background-color: #5cd1f5; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="color: white; font-size: 1.5rem; font-weight: bold;">FINDME</div>
+        <nav>
+            <a href="Home.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Home</a>
+            <a href="MyItem.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">MyItem</a>
+            <a href="Location.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Location</a>
+            <a href="Product.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Product</a>
+            <a href="Setting.html" style="color: white; margin-left: 1.5rem; text-decoration: none;">Setting</a>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; flex: 1;">
+        <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 0rem 2rem;">
+            <img id="findmeloc" src="assets/maplocc.png" alt="Pengenalan" style="border-radius: 10px; width: 1400px; height: 800px; margin-right: 2rem;">
+        </section>
+    </main>
+
+     <main style="flex:1; padding:40px;">
+        <h2 style="font-size:28px;">Select Item</h2>
+
+        <div style="margin-bottom:30px;">
+            <label for="filter" style="font-weight:bold; margin-right:10px;">Filter Kategori:</label>
+            <select id="filter" onchange="filterProduk()" style="padding:8px 12px; font-family:'Inter', sans-serif;">
+                <option value="backpack">Backpack</option>
+                <option value="suitcase">Suitcase</option>
+                <option value="key">Key</option>
+                <option value="wallet">Wallet</option>
+            </select>
+        </div>
+    </main>
+
+    <footer style="background-color:#5cd1f5; color:white; padding:20px; text-align:center;">
+        <div style="font-size:18px; font-weight:bold;">FINDME</div>
+        <div style="margin-top:10px;">
+            <a href="Home.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Home</a>
+            <a href="MyItem.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">MyItem</a>
+            <a href="Location.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Location</a>
+            <a href="Product.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Product</a>
+            <a href="Setting.html" style="color:white; margin:0 10px; font-size:14px; text-decoration:none;">Setting</a>
+        </div>
+        <p style="margin-top:10px; font-size:12px;">© 2025 Findme, Semua Hak Dilindungi</p>
+    </footer>
+
+     <script>
+        function filterProduk() {
+            const kategori = document.getElementById("filter").value;
+            const linkimg = document.getElementById("findmeloc");
+
+            if(kategori === "backpack"){
+                linkimg.src = "assets/maploc.jpg"
+            } else if(kategori === "suitcase"){
+                linkimg.src = "assets/maplocbp.png"
+            }else if(kategori === "key"){
+                linkimg.src = "assets/findme.08.jpeg"
+            }else if(kategori === "wallet"){
+                linkimg.src = "assets/findme.09.webp"
+            }
+        }
+    </script>
+</body>
+</html>
